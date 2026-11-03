@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For Radha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff3f1;--bg2:#ffe0e5;--ink:#3a1530;--soft:#7a4a62;--rose:#c2305f;--gold:#b7791f;--line:rgba(58,21,48,.2);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120d26;--bg2:#241239;--ink:#f8eef2;--soft:#cdb3c6;--rose:#ff8fa9;--gold:#f4c46a;--line:rgba(248,238,242,.22);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#120d26;--bg2:#241239;--ink:#f8eef2;--soft:#cdb3c6;--rose:#ff8fa9;--gold:#f4c46a;--line:rgba(248,238,242,.22);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main{position:relative;z-index:1}
+.serif{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif}
+.deva{font-family:"Tiro Devanagari Hindi","Noto Serif Devanagari",serif}
+section{padding:5.5rem 1.4rem}
+.wrap{max-width:38rem;margin:0 auto}
+
+.hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:3rem;background:radial-gradient(ellipse at 50% 38%,var(--bg2) 0%,transparent 68%)}
+h1{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(5rem,26vw,12rem);line-height:1;letter-spacing:.01em;color:var(--ink);text-shadow:0 0 .35em color-mix(in srgb,var(--rose) 55%,transparent)}
+h1 span{display:inline-block;opacity:0;transform:translateY(.25em);animation:in 1.3s cubic-bezier(.2,.7,.2,1) forwards}
+h1 span:nth-child(1){animation-delay:.2s}h1 span:nth-child(2){animation-delay:.45s}h1 span:nth-child(3){animation-delay:.7s}h1 span:nth-child(4){animation-delay:.95s}h1 span:nth-child(5){animation-delay:1.2s}
+@keyframes in{to{opacity:1;transform:none}}
+.hero .deva{font-size:1.5rem;color:var(--gold);margin:.4rem 0 1.6rem}
+.hero p.lead{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.4rem,4.6vw,2rem);font-style:italic;max-width:30rem;margin:0 auto 2.4rem;color:var(--soft);line-height:1.4}
+.btn{display:inline-block;font:500 1rem "Jost",sans-serif;color:var(--bg);background:var(--rose);border:0;border-radius:2rem;padding:.9rem 2.1rem;cursor:pointer;text-decoration:none;letter-spacing:.02em}
+.btn:hover{filter:brightness(1.08)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(2rem,6vw,2.8rem);line-height:1.15;margin:0 0 1.6rem;text-align:center}
+.letter p{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.25rem,3.6vw,1.45rem);line-height:1.75;margin:0 0 1.3rem}
+.letter .sign{font-style:italic;color:var(--rose);font-size:1.7rem;margin-top:2rem;text-align:right}
+.letter .sign small{display:block;font:300 .95rem "Jost",sans-serif;color:var(--soft);font-style:normal}
+
+.heart-zone{text-align:center;background:linear-gradient(180deg,transparent,var(--bg2) 50%,transparent)}
+#pulse{background:none;border:0;cursor:pointer;padding:.6rem;color:var(--rose);line-height:0;border-radius:50%}
+#pulse svg{width:6.5rem;height:6.5rem;filter:drop-shadow(0 0 .8rem color-mix(in srgb,var(--rose) 60%,transparent))}
+#pulse.beat svg{animation:beat .45s ease}
+@keyframes beat{40%{transform:scale(1.28)}100%{transform:scale(1)}}
+#whisper{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:clamp(1.5rem,5vw,2.1rem);min-height:4.2rem;margin:1.2rem auto .4rem;max-width:30rem;line-height:1.3}
+#count{color:var(--soft);font-size:.95rem;margin:0}
+
+.promises ul{list-style:none;margin:0;padding:0}
+.promises li{position:relative;padding:1.1rem 0 1.1rem 2.2rem;border-bottom:1px solid var(--line);font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.25rem,3.6vw,1.45rem);line-height:1.5}
+.promises li::before{content:"♥";position:absolute;left:0;top:1.15rem;color:var(--rose);font-size:1.1rem}
+
+footer{text-align:center;padding:5rem 1.4rem 4rem}
+footer .deva{font-size:clamp(1.8rem,6vw,2.6rem);color:var(--gold);margin:0 0 .8rem;line-height:1.4}
+footer .serif{font-style:italic;font-size:1.9rem;margin:0}
+footer small{display:block;margin-top:1rem;color:var(--soft)}
+
+.h{position:fixed;z-index:9;pointer-events:none;color:var(--rose);font-size:1.4rem;animation:rise 1.9s ease-out forwards}
+@keyframes rise{to{transform:translate(var(--dx),-150px) scale(1.5);opacity:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}h1 span{animation:none;opacity:1;transform:none}#pulse.beat svg{animation:none}.h{display:none}}
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<main>
+<section class="hero" id="top">
+  <h1 aria-label="Radha"><span>R</span><span>a</span><span>d</span><span>h</span><span>a</span></h1>
+  <div class="deva" lang="hi">राधा</div>
+  <p class="lead">You are my everything, and without you, I am nothing.</p>
+  <a class="btn" href="#letter">Read my letter</a>
+</section>
+
+<section class="letter" id="letter">
+  <div class="wrap">
+    <h2>A letter, only for you</h2>
+    <p>My dearest Radha,</p>
+    <p>I have tried to put this into words, and every time the words feel too small. So let me say it as simply and as honestly as I can: you are my everything.</p>
+    <p>You changed the way I see my world. Your smile is the first thing I wish to see in the morning and the last thing I carry with me into sleep.</p>
+    <p>I see how kind, gentle and special you are. Next to you, I want to become the best version of myself, and without you, I feel I am nothing.</p>
+    <p>You are the most precious part of my life, and I will never take that for granted. Thank you for simply being you.</p>
+    <p>Bohot bohot pyaar, Radha. With all my heart.</p>
+    <p class="sign">Forever yours<small>with all my heart</small></p>
+  </div>
+</section>
+
+<section class="heart-zone">
+  <div class="wrap">
+    <h2>Tap the heart</h2>
+    <button id="pulse" type="button" aria-label="Tap for a message of love">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.4 10.6 20.1C5.4 15.4 2 12.3 2 8.5 2 5.4 4.4 3 7.5 3c1.7 0 3.4.8 4.5 2.1C13.1 3.8 14.8 3 16.5 3 19.6 3 22 5.4 22 8.5c0 3.8-3.4 6.9-8.6 11.6L12 21.4z"/></svg>
+    </button>
+    <p id="whisper" aria-live="polite">Tap, and I will whisper something to you.</p>
+    <p id="count"></p>
+  </div>
+</section>
+
+<section class="promises">
+  <div class="wrap">
+    <h2>My promises to you</h2>
+    <ul>
+      <li>I will treat you with respect, honesty and care, always.</li>
+      <li>I will listen, protect your peace, and celebrate your dreams as my own.</li>
+      <li>I will love you with the same honesty I feel tonight, for as long as I live.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p class="deva" lang="hi">तुम मेरा सब कुछ हो</p>
+  <p class="serif">Bohot bohot pyaar, Radha.</p>
+  <small>Made with all my heart, only for you.</small>
+</footer>
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Soft twinkling stars
+  var c = document.getElementById("sky"), x = c.getContext("2d"), stars = [], W = 0, H = 0;
+  function size(){
+    W = c.width = window.innerWidth; H = c.height = window.innerHeight;
+    stars = [];
+    for (var i = 0; i < 80; i++) stars.push({x: Math.random()*W, y: Math.random()*H, r: Math.random()*1.5+.4, p: Math.random()*6.28, s: Math.random()*.02+.005});
+  }
+  function draw(){
+    var gold = getComputedStyle(document.documentElement).getPropertyValue("--gold").trim() || "#f4c46a";
+    x.clearRect(0, 0, W, H); x.fillStyle = gold;
+    for (var i = 0; i < stars.length; i++){
+      var s = stars[i]; s.p += s.s;
+      x.globalAlpha = .15 + .45*(.5 + .5*Math.sin(s.p));
+      x.beginPath(); x.arc(s.x, s.y, s.r, 0, 6.28); x.fill();
+    }
+    if (!reduce) requestAnimationFrame(draw);
+  }
+  size(); draw();
+  window.addEventListener("resize", function(){ size(); if (reduce) draw(); });
+
+  // Floating hearts
+  function burst(px, py, n){
+    if (reduce) return;
+    for (var i = 0; i < n; i++){
+      var h = document.createElement("span");
+      h.className = "h"; h.textContent = "♥";
+      h.style.left = (px - 8 + (Math.random()*40 - 20)) + "px";
+      h.style.top = (py - 8) + "px";
+      h.style.setProperty("--dx", (Math.random()*120 - 60) + "px");
+      h.style.animationDelay = (i*60) + "ms";
+      h.addEventListener("animationend", function(){ this.remove(); });
+      document.body.appendChild(h);
+    }
+  }
+  document.getElementById("top").addEventListener("pointerdown", function(e){
+    if (e.target.closest("a,button")) return;
+    burst(e.clientX, e.clientY, 5);
+  });
+
+  // Whispers
+  var words = [
+    "You are my peace.",
+    "My favourite hello, and my hardest goodbye.",
+    "With you, everything feels like a festival.",
+    "Without you I am nothing; with you, I am everything I hoped to be.",
+    "Tum ho toh sab kuch hai.",
+    "I will choose you, again and again.",
+    "Bohot bohot pyaar, Radha.",
+    "Tum meri duniya ho."
+  ];
+  var i = 0, n = 0, btn = document.getElementById("pulse"), w = document.getElementById("whisper"), cnt = document.getElementById("count");
+  btn.addEventListener("click", function(e){
+    w.textContent = words[i % words.length]; i++; n++;
+    cnt.textContent = n === 1 ? "That was 1 tap. Each one means I love you." : "That was " + n + " taps. Each one means I love you.";
+    btn.classList.remove("beat"); void btn.offsetWidth; btn.classList.add("beat");
+    var r = btn.getBoundingClientRect();
+    burst(r.left + r.width/2, r.top + r.height/2, 6);
+  });
+})();
+</script>
+</body>
+</html>
